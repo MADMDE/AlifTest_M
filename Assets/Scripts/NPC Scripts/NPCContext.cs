@@ -1,3 +1,4 @@
+using Cinemachine;
 using StarterAssets;
 using System;
 using Unity.VisualScripting;
@@ -13,6 +14,7 @@ public class NPCContext : MonoBehaviour
     public float DistanceToWaypointThreshold = 0.5f;
     public float AttackCooldownTime = 2.0f;
     public int AttackDamage = 10;
+    public float AttackImpulse = 0.05f;
 
     [Header("NPC Refrences:")]
     public Transform[] waypoints;
@@ -20,6 +22,7 @@ public class NPCContext : MonoBehaviour
     [HideInInspector] public NavMeshAgent Agent;
     [HideInInspector] public Animator BodyAnimator;
     [HideInInspector] public Transform Player;
+    [HideInInspector] public CinemachineImpulseSource CameraImpulseSource;
 
     private NPCState _currentState;
     private NPCStateUI _stateUI;
@@ -30,6 +33,7 @@ public class NPCContext : MonoBehaviour
         Agent = GetComponent<NavMeshAgent>();
         BodyAnimator = GetComponent<Animator>();
         _stateUI = GetComponentInChildren<NPCStateUI>();
+        CameraImpulseSource = GetComponent<CinemachineImpulseSource>();
 
         SetState(new PatrolState(this));
     }

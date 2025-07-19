@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using Cinemachine;
 
 public class AttackState : NPCState
 {
@@ -29,6 +30,7 @@ public class AttackState : NPCState
             context.BodyAnimator.SetTrigger("attack");
             Debug.Log("Sibil Chakhmaghi attack!");
             context.Player.GetComponent<PlayerHealth>()?.TakeDamage(context.AttackDamage);
+            context.CameraImpulseSource.GenerateImpulse(context.AttackImpulse);
             _lastAttackTime = Time. time;
         }
         else
