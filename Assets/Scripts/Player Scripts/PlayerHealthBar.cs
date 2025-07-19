@@ -1,16 +1,14 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealthBar : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [Header("HealthBar References:")]
+    [SerializeField] Image fillRendered;
 
-    // Update is called once per frame
-    void Update()
+    internal void UpdateHealth(int hP, int maxHP)
     {
-        
+        float progress = Mathf.Clamp01((float)hP / (float)maxHP);
+        fillRendered.fillAmount = progress;
     }
 }

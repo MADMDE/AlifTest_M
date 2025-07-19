@@ -64,7 +64,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void UpdateHealthBarUI()
     {
-        //healthBar.UpdateHealth(HP, MaxHP);
+        healthBar.UpdateHealth(HP, MaxHP);
     }
 
     
