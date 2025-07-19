@@ -12,6 +12,7 @@ public class NPCContext : MonoBehaviour
     public float FieldOfView = 90.0f;
     public float DistanceToWaypointThreshold = 0.5f;
     public float AttackCooldownTime = 2.0f;
+    public int AttackDamage = 10;
 
     [Header("NPC Refrences:")]
     public Transform[] waypoints;

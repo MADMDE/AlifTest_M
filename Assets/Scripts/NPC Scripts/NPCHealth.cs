@@ -7,13 +7,14 @@ public class NPCHealth : MonoBehaviour
     [Header("Health References:")]
     [SerializeField] GameObject vfxDestroyPrefab;
     [SerializeField] NPCHealthBar healthBar;
+
     int HP;
-    bool isAlive;
+    bool _isAlive;
 
     private void Start()
     {
         HP = MaxHP;
-        isAlive = true;
+        _isAlive = true;
 
         UpdateHealthBarUI();
     }
@@ -25,7 +26,7 @@ public class NPCHealth : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        if (!isAlive)
+        if (!_isAlive)
             return;
 
         HP -= damage;
@@ -40,7 +41,7 @@ public class NPCHealth : MonoBehaviour
 
     public void SelfDestruct()
     {
-        isAlive = false;
+        _isAlive = false;
         //Instantiate(vfxDestroyPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }

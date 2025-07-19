@@ -28,6 +28,7 @@ public class AttackState : NPCState
         {
             context.BodyAnimator.SetTrigger("attack");
             Debug.Log("Sibil Chakhmaghi attack!");
+            context.Player.GetComponent<PlayerHealth>()?.TakeDamage(context.AttackDamage);
             _lastAttackTime = Time. time;
         }
         else

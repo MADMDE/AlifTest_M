@@ -1,5 +1,6 @@
 using UnityEngine;
 using Cinemachine;
+using StarterAssets;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -8,15 +9,18 @@ public class PlayerHealth : MonoBehaviour
     [SerializeField] CinemachineVirtualCamera gameOverCamera;
     [SerializeField] GameObject gameOverUI;
     [SerializeField] PlayerHealthBar healthBar;
+
     int HP;
-    bool isAlive;
+    bool _isAlive;
     bool _isGameOver;
+    FirstPersonController _firstPersonController;
 
     private void Start()
     {
         HP = MaxHP;
-        isAlive = true;
+        _isAlive = true;
         _isGameOver = false;
+        _firstPersonController = GetComponent<FirstPersonController>();
         gameOverUI.SetActive(false);
 
         UpdateHealthBarUI();
@@ -29,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void TakeDamage(int damage)
     {
-        if (!isAlive)
+        if (!_isAlive)
             return;
 
         HP -= damage;
@@ -44,8 +48,9 @@ public class PlayerHealth : MonoBehaviour
 
     private void GameOver()
     {
-        isAlive = false;
+        _isAlive = false;
         _isGameOver = true;
+        _firstPersonController.enabled = false;
         gameOverCamera.Priority = 10;
         gameOverUI.SetActive(true);
 
