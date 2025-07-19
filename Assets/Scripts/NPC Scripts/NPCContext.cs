@@ -57,4 +57,9 @@ public class NPCContext : MonoBehaviour
     {
         _stateUI.UpdateLostPlayerUI(value);
     }
+
+    public void DeactivateStateVisual()
+    {
+        _stateUI?.DeactivateStateVisual();
+    }
 }

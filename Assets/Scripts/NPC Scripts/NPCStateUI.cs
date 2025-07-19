@@ -50,14 +50,23 @@ public class NPCStateUI : MonoBehaviour
         stateFrame.color = new Color(color.r, color.g, color.b, 0.25f);
     }
 
+    public void DeactivateStateVisual()
+    {
+        stateText.enabled = false;
+        stateFrame.enabled = false;
+        lostPlayerText.enabled = false;
+        lostPlayerFrame.enabled = false;
+
+    }
+    public void UpdateLostPlayerUI(bool value)
+    {
+        lostPlayerText.gameObject.SetActive(value);
+        lostPlayerFrame.gameObject.SetActive(value);
+    }
+
     private void LookAtCamera()
     {
         transform.rotation = Quaternion.LookRotation(transform.position - _camera.transform.position);
     }
 
-    internal void UpdateLostPlayerUI(bool value)
-    {
-        lostPlayerText.gameObject.SetActive(value);
-        lostPlayerFrame.gameObject.SetActive(value);
-    }
 }

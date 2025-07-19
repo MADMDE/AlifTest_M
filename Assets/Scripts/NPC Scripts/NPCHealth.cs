@@ -8,13 +8,18 @@ public class NPCHealth : MonoBehaviour
     [SerializeField] GameObject vfxDestroyPrefab;
     [SerializeField] NPCHealthBar healthBar;
 
+
     int HP;
     bool _isAlive;
+    Animator _animator;
+    NPCContext _context;
 
     private void Start()
     {
         HP = MaxHP;
         _isAlive = true;
+        _animator = GetComponent<Animator>();
+        _context = GetComponent<NPCContext>();
 
         UpdateHealthBarUI();
     }
@@ -22,7 +27,7 @@ public class NPCHealth : MonoBehaviour
     [ContextMenu(nameof(Test_TakeDamage))]
     public void Test_TakeDamage()
     {
-        TakeDamage(10);
+        TakeDamage(100);
     }
     public void TakeDamage(int damage)
     {
@@ -33,20 +38,27 @@ public class NPCHealth : MonoBehaviour
 
         if(HP <= 0)
         {
-            SelfDestruct();
+            Death();
         }
 
         UpdateHealthBarUI();
     }
 
-    public void SelfDestruct()
+    public void Death()
     {
         _isAlive = false;
-        //Instantiate(vfxDestroyPrefab, transform.position, transform.rotation);
-        Destroy(gameObject);
+        _animator.SetTrigger("death");
+        _context.Agent.isStopped = true;
+        _context.enabled = false;
+        _context.DeactivateStateVisual();
+
+        healthBar.gameObject.SetActive(false);
     }
     private void UpdateHealthBarUI()
     {
+        if (!_isAlive)
+            return;
+
         healthBar.UpdateHealth(HP, MaxHP);
     }
 }
