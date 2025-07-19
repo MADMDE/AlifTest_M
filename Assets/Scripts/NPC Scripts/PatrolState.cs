@@ -8,6 +8,7 @@ public class PatrolState : NPCState
 
     public override void Enter()
     {
+        context.Agent.isStopped = false;
         //To Do: context.animator. Set To Walking.....
 
         if(context.waypoints.Length > 0)

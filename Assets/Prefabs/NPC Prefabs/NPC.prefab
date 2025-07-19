@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3602759362960489453}
   - component: {fileID: 7877775152782813606}
   m_Layer: 6
-  m_Name: Eye
+  m_Name: Eye R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -484,6 +484,7 @@ MonoBehaviour:
   AttackDistance: 3
   FieldOfView: 90
   DistanceToWaypointThreshold: 0.5
+  AttackCooldownTime: 2
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -518,7 +519,7 @@ NavMeshAgent:
   m_Speed: 3
   m_Acceleration: 8
   avoidancePriority: 50
-  m_AngularSpeed: 120
+  m_AngularSpeed: 180
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
@@ -605,7 +606,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2297208961933559684}
   m_Layer: 6
-  m_Name: RobotModel
+  m_Name: AmooModel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -763,7 +764,7 @@ GameObject:
   - component: {fileID: 3031763202758587677}
   - component: {fileID: 1423873994924632034}
   m_Layer: 6
-  m_Name: Eye
+  m_Name: Eye L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

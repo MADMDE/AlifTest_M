@@ -19,7 +19,7 @@ public class EngageState : NPCState
 
         if(distanceToPlayer < context.AttackDistance)
         {
-            //To DO : context.SetState(new AttakeState);
+            context.SetState(new AttackState(context));
             Debug.Log("Attack xxxxxxxxxxxxxxxxxxxxxxx");
             return;
         }
@@ -33,4 +33,8 @@ public class EngageState : NPCState
         context.Agent.SetDestination(context.Player.position);
     }
 
+    public override void Exit()
+    {
+        //To Do:
+    }
 }
