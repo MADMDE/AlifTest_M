@@ -519,9 +519,9 @@ MonoBehaviour:
   AttackDistance: 3.5
   FieldOfView: 90
   DistanceToWaypointThreshold: 0.5
-  AttackCooldownTime: 2
-  AttackDamage: 25
-  AttackImpulse: 0.04
+  AttackCooldownTime: 1
+  AttackDamage: 20
+  AttackImpulse: 0.05
   DisengageTime: 3
   waypoints:
   - {fileID: 0}
