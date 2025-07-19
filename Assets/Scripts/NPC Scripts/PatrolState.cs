@@ -23,7 +23,8 @@ public class PatrolState : NPCState
 
         float distanceToPlayer = Vector3.Distance(context.transform.position, context.Player.position);
 
-        if( distanceToPlayer < context.EngageDistance && InFieldOfView(context.Player))
+        if( distanceToPlayer < context.EngageDistance 
+            && InFieldOfView(context.Player))
         {
             //To Do: Set State To Engage context.SetState()
             Debug.Log("Engage!!!!!!!!!!!!!!!!!!!!!!!!!!");
