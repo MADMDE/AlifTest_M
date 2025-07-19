@@ -21,12 +21,14 @@ public class NPCContext : MonoBehaviour
     [HideInInspector] public Transform Player;
 
     private NPCState _currentState;
+    private NPCStateUI _stateUI;
 
     void Start()
     {
         Player = FindFirstObjectByType<FirstPersonController>().transform;
         Agent = GetComponent<NavMeshAgent>();
         BodyAnimator = GetComponent<Animator>();
+        _stateUI = GetComponentInChildren<NPCStateUI>();
 
         SetState(new PatrolState(this));
     }
@@ -41,5 +43,7 @@ public class NPCContext : MonoBehaviour
         _currentState?.Exit();
         _currentState = newState;
         _currentState.Enter();
+
+        _stateUI.UpdateStateVisual(_currentState);
     }
 }

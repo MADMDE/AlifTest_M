@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -20,7 +21,11 @@ public class NPCHealthBar : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.rotation = Quaternion.LookRotation(transform.position - _camera.transform.position);
+        LookAtCamera();
     }
 
+    private void LookAtCamera()
+    {
+        transform.rotation = Quaternion.LookRotation(transform.position - _camera.transform.position);
+    }
 }
