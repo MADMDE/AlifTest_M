@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class EnemyHealth : MonoBehaviour
+public class NPCHealth : MonoBehaviour
 {
     [SerializeField] int MaxHP;
     [SerializeField] GameObject vfxDestroyPrefab;

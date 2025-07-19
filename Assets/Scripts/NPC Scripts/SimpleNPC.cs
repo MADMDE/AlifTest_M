@@ -2,7 +2,7 @@ using StarterAssets;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class EnemyRobot : MonoBehaviour
+public class SimpleNPC : MonoBehaviour
 {
     FirstPersonController player;
     private NavMeshAgent agent;
@@ -31,7 +31,7 @@ public class EnemyRobot : MonoBehaviour
     {
         if(other.CompareTag(PlayerTag))
         {
-            GetComponent<EnemyHealth>().SelfDestruct();
+            GetComponent<NPCHealth>().SelfDestruct();
         }
     }
 }
