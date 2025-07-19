@@ -1,15 +1,44 @@
+using StarterAssets;
+using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class NPCContext : MonoBehaviour
 {
+    [Header("NPC Core Properties:")]
+    public float EngageDistance = 5.0f;
+    public float AttackDistance = 2.0f;
+    public float FieldOfView = 90.0f;
+    public float DistanceToWaypointThreshold = 0.5f;
+
+    [Header("NPC Refrences:")]
+    public Transform[] waypoints;
+
+    [HideInInspector] public NavMeshAgent Agent;
+    [HideInInspector] public Animator BodyAnimator;
+    [HideInInspector] public Transform Player;
+
+    private NPCState _currentState;
+
     void Start()
     {
-        
+        Player = FindFirstObjectByType<FirstPersonController>().transform;
+        Agent = GetComponent<NavMeshAgent>();
+        BodyAnimator = GetComponent<Animator>();
+
+        SetState(new PatrolState(this));
     }
 
     void Update()
     {
-        
+        _currentState?.Update();
+    }
+
+    public void SetState(PatrolState newState)
+    {
+        _currentState?.Exit();
+        _currentState = newState;
+        _currentState.Enter();
     }
 }
