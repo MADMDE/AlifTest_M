@@ -522,6 +522,7 @@ MonoBehaviour:
   AttackCooldownTime: 2
   AttackDamage: 25
   AttackImpulse: 0.04
+  DisengageTime: 3
   waypoints:
   - {fileID: 0}
   - {fileID: 0}
@@ -1070,26 +1071,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: State UI
       objectReference: {fileID: 0}
-    - target: {fileID: 1870446876530802905, guid: a3290d11ca2b8c6489c610a9c42cc094, type: 3}
-      propertyPath: stateText
-      value: 
-      objectReference: {fileID: 613151291995335330}
-    - target: {fileID: 1870446876530802905, guid: a3290d11ca2b8c6489c610a9c42cc094, type: 3}
-      propertyPath: stateFrame
-      value: 
-      objectReference: {fileID: 1066440578723121301}
-    - target: {fileID: 5209122875972719163, guid: a3290d11ca2b8c6489c610a9c42cc094, type: 3}
-      propertyPath: m_text
-      value: engage
-      objectReference: {fileID: 0}
-    - target: {fileID: 5209122875972719163, guid: a3290d11ca2b8c6489c610a9c42cc094, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 5209122875972719163, guid: a3290d11ca2b8c6489c610a9c42cc094, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6121851721576150704, guid: a3290d11ca2b8c6489c610a9c42cc094, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1175,28 +1156,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3290d11ca2b8c6489c610a9c42cc094, type: 3}
---- !u!114 &613151291995335330 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5209122875972719163, guid: a3290d11ca2b8c6489c610a9c42cc094, type: 3}
-  m_PrefabInstance: {fileID: 4668223395639539865}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1066440578723121301 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5621651768654540812, guid: a3290d11ca2b8c6489c610a9c42cc094, type: 3}
-  m_PrefabInstance: {fileID: 4668223395639539865}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &1458589883339361833 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6121851721576150704, guid: a3290d11ca2b8c6489c610a9c42cc094, type: 3}

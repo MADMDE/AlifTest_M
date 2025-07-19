@@ -33,10 +33,6 @@ public class AttackState : NPCState
             context.CameraImpulseSource.GenerateImpulse(context.AttackImpulse);
             _lastAttackTime = Time. time;
         }
-        else
-        {
-            Debug.Log("Cooldown");
-        }
 
         LookAt(context.Player);
     }

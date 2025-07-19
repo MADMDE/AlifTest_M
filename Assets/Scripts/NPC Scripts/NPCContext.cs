@@ -15,6 +15,7 @@ public class NPCContext : MonoBehaviour
     public float AttackCooldownTime = 2.0f;
     public int AttackDamage = 10;
     public float AttackImpulse = 0.05f;
+    public float DisengageTime = 1.0f;
 
     [Header("NPC Refrences:")]
     public Transform[] waypoints;
@@ -50,5 +51,10 @@ public class NPCContext : MonoBehaviour
         _currentState.Enter();
 
         _stateUI.UpdateStateVisual(_currentState);
+    }
+
+    public void UpdateLostPlayerUI(bool value)
+    {
+        _stateUI.UpdateLostPlayerUI(value);
     }
 }

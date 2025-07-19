@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,7 +7,9 @@ public class NPCStateUI : MonoBehaviour
 {
     [Header("State UI References:")]
     [SerializeField] TMP_Text stateText;
-    [SerializeField] Image stateFrame;
+    [SerializeField] Image stateFrame;   
+    [SerializeField] TMP_Text lostPlayerText;
+    [SerializeField] Image lostPlayerFrame;
 
 
     private Camera _camera;
@@ -50,5 +53,11 @@ public class NPCStateUI : MonoBehaviour
     private void LookAtCamera()
     {
         transform.rotation = Quaternion.LookRotation(transform.position - _camera.transform.position);
+    }
+
+    internal void UpdateLostPlayerUI(bool value)
+    {
+        lostPlayerText.gameObject.SetActive(value);
+        lostPlayerFrame.gameObject.SetActive(value);
     }
 }
