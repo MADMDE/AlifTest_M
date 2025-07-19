@@ -6866,34 +6866,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &2028595089 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5212186958676863320, guid: 37a862fcda01be344ab972b22e2c219d, type: 3}
-  m_PrefabInstance: {fileID: 1715549801949943116}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2028595095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2028595089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9320fed7ac927624ebd200fc481fd680, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EngageDistance: 5
-  AttackDistance: 2
-  FieldOfView: 90
-  DistanceToWaypointThreshold: 0.5
-  waypoints:
-  - {fileID: 390324297}
-  - {fileID: 277403428}
-  - {fileID: 1679570664}
-  Agent: {fileID: 0}
-  BodyAnimator: {fileID: 0}
-  Player: {fileID: 0}
 --- !u!81 &459303240754319205
 AudioListener:
   m_ObjectHideFlags: 0
@@ -7083,6 +7055,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2617256935910905835, guid: 37a862fcda01be344ab972b22e2c219d, type: 3}
+      propertyPath: 'waypoints.Array.data[0]'
+      value: 
+      objectReference: {fileID: 390324297}
+    - target: {fileID: 2617256935910905835, guid: 37a862fcda01be344ab972b22e2c219d, type: 3}
+      propertyPath: 'waypoints.Array.data[1]'
+      value: 
+      objectReference: {fileID: 277403428}
+    - target: {fileID: 2617256935910905835, guid: 37a862fcda01be344ab972b22e2c219d, type: 3}
+      propertyPath: 'waypoints.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1679570664}
+    - target: {fileID: 4624443562704901764, guid: 37a862fcda01be344ab972b22e2c219d, type: 3}
+      propertyPath: m_Speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624443562704901764, guid: 37a862fcda01be344ab972b22e2c219d, type: 3}
+      propertyPath: m_AngularSpeed
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4624443562704901764, guid: 37a862fcda01be344ab972b22e2c219d, type: 3}
+      propertyPath: m_StoppingDistance
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5212186958676863320, guid: 37a862fcda01be344ab972b22e2c219d, type: 3}
       propertyPath: m_Name
       value: NPC (1)
@@ -7095,14 +7091,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: e481168d0edf70b43a32e693ad702e96, type: 2}
-    m_RemovedComponents:
-    - {fileID: 5287921637616818603, guid: 37a862fcda01be344ab972b22e2c219d, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5212186958676863320, guid: 37a862fcda01be344ab972b22e2c219d, type: 3}
-      insertIndex: 1
-      addedObject: {fileID: 2028595095}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a862fcda01be344ab972b22e2c219d, type: 3}
 --- !u!4 &1738281439242425740
 Transform:

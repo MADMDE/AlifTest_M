@@ -439,7 +439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1094315939972215696}
-  - component: {fileID: 5287921637616818603}
+  - component: {fileID: 2617256935910905835}
   - component: {fileID: 849570393735835359}
   - component: {fileID: 4624443562704901764}
   - component: {fileID: 7490483394360272386}
@@ -468,7 +468,7 @@ Transform:
   - {fileID: 7144128254852763355}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5287921637616818603
+--- !u!114 &2617256935910905835
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -477,9 +477,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 5212186958676863320}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37dbc0c70b84de54cac3bd3b498bb574, type: 3}
+  m_Script: {fileID: 11500000, guid: 9320fed7ac927624ebd200fc481fd680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  EngageDistance: 7
+  AttackDistance: 3
+  FieldOfView: 90
+  DistanceToWaypointThreshold: 0.5
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  Agent: {fileID: 0}
+  BodyAnimator: {fileID: 0}
+  Player: {fileID: 0}
 --- !u!114 &849570393735835359
 MonoBehaviour:
   m_ObjectHideFlags: 0

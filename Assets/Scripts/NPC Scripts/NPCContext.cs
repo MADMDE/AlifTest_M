@@ -35,7 +35,7 @@ public class NPCContext : MonoBehaviour
         _currentState?.Update();
     }
 
-    public void SetState(PatrolState newState)
+    public void SetState(NPCState newState)
     {
         _currentState?.Exit();
         _currentState = newState;

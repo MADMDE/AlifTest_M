@@ -26,8 +26,8 @@ public class PatrolState : NPCState
         if( distanceToPlayer < context.EngageDistance 
             && InFieldOfView(context.Player))
         {
-            //To Do: Set State To Engage context.SetState()
-            Debug.Log("Engage!!!!!!!!!!!!!!!!!!!!!!!!!!");
+            context.SetState(new EngageState(context));
+            Debug.Log("Engage!!!!!!!!!!");
             return;
         }
 
