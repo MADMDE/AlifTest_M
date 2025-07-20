@@ -47,25 +47,20 @@ public class PatrolState : NPCState
 
     private int ClaculateNewWaypointIndex()
     {
-        //One Way and Return To First Point: _waypointIndex = (_waypointIndex + 1) % context.waypoints.Length;
-
-        int index = _isWayback ? this._waypointIndex - 1 : this._waypointIndex + 1;
+        int index = this._waypointIndex + (_isWayback ? -1 : +1);
 
         if (index >= context.waypoints.Length)
         {
             _isWayback = true;
             index = context.waypoints.Length - 2;
-            if (index < 0)
-                index = 0;
         }
         else if (index < 0)
         {
             _isWayback = false;
             index = 1;
-            if (index > context.waypoints.Length)
-                index = 0;
         }
-        return index;
+
+        return Mathf.Clamp(index, 0, context.waypoints.Length - 1);
     }
 
     private bool InFieldOfView(Transform target)
