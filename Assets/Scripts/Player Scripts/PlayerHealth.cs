@@ -50,9 +50,9 @@ public class PlayerHealth : MonoBehaviour
     {
         _isAlive = false;
         _isGameOver = true;
-        _firstPersonController.enabled = false;
         gameOverCamera.Priority = 10;
         gameOverUI.SetActive(true);
+        _firstPersonController.gameObject.SetActive(false);
 
         Invoke(nameof(RestartLevel), 5f);
     }
