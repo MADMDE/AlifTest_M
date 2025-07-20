@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8581067185155380799}
   - component: {fileID: 8759586823795181844}
   m_Layer: 0
-  m_Name: Hit VFX
+  m_Name: Shurikan Hit VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4781,7 +4781,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b1864a8bc2e939c4bb5ab08fede89adf, type: 2}
+  - {fileID: 2100000, guid: 62b716216a00b5e4f9e71acaae5d69cd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

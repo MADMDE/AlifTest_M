@@ -9,7 +9,6 @@ public class PatrolState : NPCState
     public override void Enter()
     {
         context.Agent.isStopped = false;
-        //To Do: context.animator. Set To Walking.....
 
         if(context.waypoints.Length > 0)
         {
@@ -28,7 +27,6 @@ public class PatrolState : NPCState
             && InFieldOfView(context.Player))
         {
             context.SetState(new EngageState(context));
-            Debug.Log("Engage!!!!!!!!!!");
             return;
         }
 
@@ -50,7 +48,6 @@ public class PatrolState : NPCState
         Vector3 directionToTarget = target.position - context.transform.position;
         float angle = Vector3.Angle(context.transform.forward, directionToTarget);
         bool result = angle < context.FieldOfView;
-        Debug.Log($"Angle:{angle} InFieldOfView???: {result}");
         return result;
     }
 

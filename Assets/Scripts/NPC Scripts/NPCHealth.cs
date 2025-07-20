@@ -5,7 +5,6 @@ public class NPCHealth : MonoBehaviour
 {
     [SerializeField] int MaxHP = 100;
     [Header("Health References:")]
-    [SerializeField] GameObject vfxDestroyPrefab;
     [SerializeField] NPCHealthBar healthBar;
 
 
@@ -42,6 +41,7 @@ public class NPCHealth : MonoBehaviour
         }
 
         UpdateHealthBarUI();
+
     }
 
     public void Death()

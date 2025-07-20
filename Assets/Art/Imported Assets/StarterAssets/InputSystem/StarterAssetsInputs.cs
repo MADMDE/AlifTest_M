@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
@@ -7,6 +8,8 @@ namespace StarterAssets
 {
 	public class StarterAssetsInputs : MonoBehaviour
 	{
+		public static Action OnShootAction;
+
 		[Header("Character Input Values")]
 		public Vector2 move;
 		public Vector2 look;
@@ -85,6 +88,11 @@ namespace StarterAssets
 		public void ShootInput(bool newShootState)
 		{
 			shoot = newShootState;
+
+			if(shoot)
+			{
+				OnShootAction?.Invoke();
+			}
 		}
 		
 		private void OnApplicationFocus(bool hasFocus)

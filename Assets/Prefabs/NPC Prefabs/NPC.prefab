@@ -481,7 +481,7 @@ GameObject:
   - component: {fileID: 2241097063754448939}
   m_Layer: 6
   m_Name: NPC
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -521,7 +521,7 @@ MonoBehaviour:
   DistanceToWaypointThreshold: 0.5
   AttackCooldownTime: 1
   AttackDamage: 20
-  AttackImpulse: 0.05
+  AttackImpulse: 0.2
   DisengageTime: 3
   waypoints:
   - {fileID: 0}
